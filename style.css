@@ -1,0 +1,8 @@
+/* 全体のベースフォントを明朝体風に固定 */
+.font-serif {
+    font-family: 'Noto Serif JP', serif;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+}
