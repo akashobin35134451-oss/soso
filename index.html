@@ -12,16 +12,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-[#fcfbf9] text-[#111e38] font-serif">
+<body class="bg-[#111e38] text-white font-serif min-h-screen flex flex-col">
 
     <!-- ヘッダーナビゲーション -->
-    <header class="max-w-6xl mx-auto px-4 py-4 md:py-6 flex flex-col sm:flex-row justify-between items-center gap-4 border-b border-gray-100">
-        <div class="text-xl md:text-2xl font-bold tracking-widest font-serif text-[#111e38]">SCOPE</div>
+   <header class="sticky top-0 z-50 w-full px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4 border-b border-white/10 bg-white/[0.06] backdrop-blur-md shadow-lg shadow-black/10">
+        <div class="text-xl md:text-2xl font-bold tracking-widest font-serif text-white">SCOPE</div>
         
-        <nav class="flex items-center space-x-4 md:space-x-6 text-xs md:text-sm font-medium">
-            <a href="#" class="hover:text-[#c5a059] transition py-1">ABOUT</a>
-            <a href="#" class="hover:text-[#c5a059] transition py-1">EVENT</a>
-            <a href="https://lin.ee/wIPsUuG" target="_blank" rel="noopener noreferrer" class="bg-[#111e38] text-white px-3 py-1.5 md:px-4 md:py-2 rounded hover:bg-[#1d3158] transition whitespace-nowrap">LINE登録</a>
+        <nav class="flex items-center space-x-6 text-xs md:text-sm font-medium text-gray-200">
+            <a href="#" class="hover:text-[#c5a059] transition">ABOUT</a>
+            <a href="#" class="hover:text-[#c5a059] transition">EVENT</a>
+            <a href="ここに公式LINEのURL" target="_blank" rel="noopener noreferrer" class="border border-[#c5a059] text-[#c5a059] px-4 py-1.5 rounded hover:bg-[#c5a059] hover:text-[#111e38] transition whitespace-nowrap">LINE登録</a>
         </nav>
     </header>
 
@@ -43,7 +43,7 @@
     </section>
 
     <!-- フッター -->
-    <footer class="bg-[#111e38] text-gray-400 text-xs text-center py-8 border-t border-gray-800">
+    <footer class="w-full bg-[#111e38] text-gray-400 text-xs text-center py-8 border-t border-gray-800/50 mt-auto">
         <p>&copy; 2026 SCOPE 学生実行委員会. All Rights Reserved.</p>
     </footer>
 
