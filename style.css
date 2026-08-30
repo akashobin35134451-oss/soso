@@ -1,8 +1,9 @@
-/* 全体のベースフォントを明朝体風に固定 */
-.font-serif {
-    font-family: 'Noto Serif JP', serif;
+/* サイト全体のベースフォントを Noto Serif JP に統一 */
+body {
+    font-family: 'Noto Serif JP', 'Georgia', 'Hiragino Mincho ProN', 'MS Mincho', serif;
 }
 
-body {
-    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+/* もしHTML側に個別で font-serif を指定している場合も、これで綺麗に統一されます */
+.font-serif {
+    font-family: 'Noto Serif JP', serif;
 }

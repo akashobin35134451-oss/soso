@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPONSORS | SCOPE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-[#0b1329] text-white font-serif min-h-screen flex flex-col selection:bg-[#c5a059] selection:text-[#111e38] overflow-x-hidden">
+
+    <!-- 背景幾何学演出 -->
+    <div class="fixed inset-0 pointer-events-none z-0">
+        <div class="absolute top-[-10%] right-[-10%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-[#c5a059]/10 rounded-full blur-[100px] md:blur-[120px]"></div>
+        <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#c5a059_1px,transparent_1px)] [background-size:24px_24px]"></div>
+    </div>
+
+    <!-- ヘッダー -->
+    <header class="sticky top-0 z-50 w-full px-4 md:px-6 flex items-center justify-between border-b border-white/10 bg-[#0b1329]/90 backdrop-blur-xl shadow-lg h-16 md:h-20 transition-all">
+        <div class="flex items-center shrink-0">
+            <a href="index.html">
+                <img src="logo.PNG" alt="SCOPE" class="h-7 md:h-9 w-auto object-contain">
+            </a>
+        </div>
+        <nav class="flex items-center space-x-4 md:space-x-6 text-xs md:text-sm font-medium text-gray-200 overflow-x-auto no-scrollbar py-2">
+            <a href="index.html" class="relative py-1 hover:text-[#c5a059] transition-colors whitespace-nowrap after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#c5a059] hover:after:w-full after:transition-all after:duration-300">HOME</a>
+            <a href="about.html" class="relative py-1 hover:text-[#c5a059] transition-colors whitespace-nowrap after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#c5a059] hover:after:w-full after:transition-all after:duration-300">ABOUT</a>
+            <a href="event.html" class="relative py-1 hover:text-[#c5a059] transition-colors whitespace-nowrap after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#c5a059] hover:after:w-full after:transition-all after:duration-300">EVENT</a>
+            <a href="sponsors.html" class="relative py-1 text-[#c5a059] font-bold whitespace-nowrap after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#c5a059]">SPONSORS</a>
+            <a href="https://lin.ee/wIPsUuG" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-[#c5a059] to-[#dfba73] text-[#0b1329] px-4 md:px-5 py-1.5 md:py-2 rounded-full font-bold hover:brightness-110 transition shadow-[0_0_15px_rgba(197,160,89,0.4)] whitespace-nowrap text-xs">LINE登録</a>
+        </nav>
+    </header>
+
+    <main class="flex-grow max-w-6xl w-full mx-auto px-4 md:px-6 py-12 md:py-20 relative z-10">
+        <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
+            <span class="text-[#c5a059] text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase block mb-2">Partner Companies & Interview</span>
+            <h1 class="text-2xl md:text-5xl font-bold">SPONSORS</h1>
+            <div class="w-12 md:w-16 h-[2px] md:h-[3px] bg-gradient-to-r from-transparent via-[#c5a059] to-transparent mx-auto mt-4"></div>
+            <p class="text-gray-300 text-xs md:text-sm mt-4 md:mt-6 max-w-xl mx-auto font-light leading-relaxed">
+                SCOPEにご賛同いただいている協賛企業様のインタビューおよび採用情報（新卒・インターン・アルバイト）をご紹介します。
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8 md:gap-12">
+            
+            <!-- 企業カード 1 -->
+            <article class="bg-[#121c36] border border-white/10 rounded-2xl md:rounded-3xl overflow-hidden backdrop-blur-xl shadow-2xl transition-all" data-aos="fade-up">
+                <!-- 概要ヘッダー部分 -->
+                <div class="grid grid-cols-1 lg:grid-cols-12">
+                    <div class="lg:col-span-5 bg-[#182647] flex flex-col items-center justify-center p-6 md:p-8 border-b lg:border-b-0 lg:border-r border-white/10 min-h-[200px] relative overflow-hidden">
+                        <i class="fa-solid fa-building-user text-4xl text-[#c5a059]/40 mb-3"></i>
+                        <span class="text-[#c5a059] text-xs font-bold border border-[#c5a059]/40 px-3 py-1 rounded-full bg-[#c5a059]/10 text-center">株式会社サンプルパートナーズ</span>
+                        <p class="text-[10px] text-gray-400 mt-2">IT・Webマーケティング事業 / 仙台市青葉区</p>
+                    </div>
+                    
+                    <div class="lg:col-span-7 p-5 md:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="bg-[#c5a059] text-[#0b1329] text-[10px] font-bold px-2.5 py-0.5 rounded-md">新卒採用あり</span>
+                                <span class="bg-blue-500/20 text-blue-300 border border-blue-500/40 text-[10px] px-2.5 py-0.5 rounded-md">長期インターン</span>
+                                <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] px-2.5 py-0.5 rounded-md">有償アルバイト</span>
+                            </div>
+                            <h2 class="text-lg md:text-2xl font-bold text-white mb-2">「若い情熱と本音が、次のイノベーションを起こす」</h2>
+                            <p class="text-xs text-[#c5a059] font-bold mb-3">代表取締役 仙台 太郎 氏 Interview</p>
+                            <p class="text-gray-300 text-xs md:text-sm leading-relaxed font-light mb-4">
+                                仙台から全国へWebソリューションを展開する成長企業。若手にも裁量権を与え、失敗を恐れず挑戦できる環境づくりについて語っていただきました。
+                            </p>
+                        </div>
+                        
+                        <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+                            <span class="text-[10px] md:text-xs text-gray-400">募集職種: 総合職 / 企画営業 / エンジニア</span>
+                            <!-- 開閉ボタン -->
+                            <button onclick="toggleDetail('sponsor-1', this)" class="inline-flex items-center gap-2 text-xs text-[#c5a059] font-bold hover:brightness-125 transition bg-[#c5a059]/10 px-4 py-2 rounded-xl border border-[#c5a059]/30">
+                                <span>取材記事・採用情報を見る</span>
+                                <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 開閉する詳細エリア（取材記事 ＋ 採用情報） -->
+                <div id="sponsor-1" class="hidden border-t border-white/10 bg-[#0c1429] p-5 md:p-10 space-y-10">
+                    
+                    <!-- ① 取材記事セクション -->
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold text-[#c5a059] mb-6 flex items-center gap-2 border-b border-[#c5a059]/30 pb-3">
+                            <i class="fa-solid fa-comments"></i> SCOPE 独自取材インタビュー
+                        </h3>
+
+                        <div class="space-y-6">
+                            <!-- Q1 -->
+                            <div class="bg-white/[0.02] border border-white/5 rounded-xl p-4 md:p-5">
+                                <h4 class="text-xs md:text-sm font-bold text-[#e5c583] mb-2 flex items-start gap-2">
+                                    <span class="bg-[#c5a059] text-[#0b1329] text-[10px] px-1.5 py-0.5 rounded shrink-0 font-extrabold">Q1</span>
+                                    御社はどんな会社で、どのような強みがありますか？
+                                </h4>
+                                <p class="text-xs md:text-sm text-gray-300 font-light leading-relaxed pl-6">
+                                    私たちは東北の企業のWebマーケティングやSNS運用支援を行っている会社です。自社で一貫して戦略立案からクリエイティブ制作まで手掛けられるスピード感と、データの透明性が最大の強みです。
+                                </p>
+                            </div>
+
+                            <!-- Q2 -->
+                            <div class="bg-white/[0.02] border border-white/5 rounded-xl p-4 md:p-5">
+                                <h4 class="text-xs md:text-sm font-bold text-[#e5c583] mb-2 flex items-start gap-2">
+                                    <span class="bg-[#c5a059] text-[#0b1329] text-[10px] px-1.5 py-0.5 rounded shrink-0 font-extrabold">Q2</span>
+                                    どんな人が御社に向いていますか？また職場の雰囲気は？
+                                </h4>
+                                <p class="text-xs md:text-sm text-gray-300 font-light leading-relaxed pl-6">
+                                    「指示を待つより自分で考えて動きたい人」に向いています。平均年齢は28歳と若く、役職に関わらず自由に変革の意見を言えるフラットで風通しの良い雰囲気です。
+                                </p>
+                            </div>
+
+                            <!-- Q3 -->
+                            <div class="bg-white/[0.02] border border-white/5 rounded-xl p-4 md:p-5">
+                                <h4 class="text-xs md:text-sm font-bold text-[#e5c583] mb-2 flex items-start gap-2">
+                                    <span class="bg-[#c5a059] text-[#0b1329] text-[10px] px-1.5 py-0.5 rounded shrink-0 font-extrabold">Q3</span>
+                                    新卒採用・選考では学生のどんなところを見ていますか？
+                                </h4>
+                                <p class="text-xs md:text-sm text-gray-300 font-light leading-relaxed pl-6">
+                                    スキルや学歴よりも「素直さ」と「失敗から学べるか」を見ています。「なぜこの会社で挑戦したいのか」という自分の言葉と熱意を大切にしています。
+                                </p>
+                            </div>
+
+                            <!-- Q4 -->
+                            <div class="bg-white/[0.02] border border-white/5 rounded-xl p-4 md:p-5">
+                                <h4 class="text-xs md:text-sm font-bold text-[#e5c583] mb-2 flex items-start gap-2">
+                                    <span class="bg-[#c5a059] text-[#0b1329] text-[10px] px-1.5 py-0.5 rounded shrink-0 font-extrabold">Q4</span>
+                                    インターンやアルバイトでは実際にどんな仕事を体験できますか？
+                                </h4>
+                                <p class="text-xs md:text-sm text-gray-300 font-light leading-relaxed pl-6">
+                                    雑用ではなく、実際のクライアント案件のSNS企画立案や記事執筆、データ分析を担当してもらいます。社員と同じマーケティングのプロの視点を体感していただけます。
+                                </p>
+                            </div>
+
+                            <!-- Q5 -->
+                            <div class="bg-white/[0.02] border border-white/5 rounded-xl p-4 md:p-5">
+                                <h4 class="text-xs md:text-sm font-bold text-[#e5c583] mb-2 flex items-start gap-2">
+                                    <span class="bg-[#c5a059] text-[#0b1329] text-[10px] px-1.5 py-0.5 rounded shrink-0 font-extrabold">Q5</span>
+                                    実際に働いていて「楽しい」「成長できた」と感じる瞬間は？
+                                </h4>
+                                <p class="text-xs md:text-sm text-gray-300 font-light leading-relaxed pl-6">
+                                    自分が施策したコンテンツで数値（PVや集客数）がドカンと伸びて、クライアントの社長から「ありがとう！」と直接感謝された瞬間ですね。大きなやりがいを感じます。
+                                </p>
+                            </div>
+
+                            <!-- Q6 -->
+                            <div class="bg-white/[0.02] border border-white/5 rounded-xl p-4 md:p-5">
+                                <h4 class="text-xs md:text-sm font-bold text-[#e5c583] mb-2 flex items-start gap-2">
+                                    <span class="bg-[#c5a059] text-[#0b1329] text-[10px] px-1.5 py-0.5 rounded shrink-0 font-extrabold">Q6</span>
+                                    最後に、学生に向けてメッセージをお願いします！
+                                </h4>
+                                <p class="text-xs md:text-sm text-gray-300 font-light leading-relaxed pl-6">
+                                    就活はお互いの本音でマッチングする場です。SCOPEなどの交流会でどんどん大人や経営者と話し、自分の可能性を広げてください。熱い想いを持った皆さんとお会いできるのを楽しみにしています！
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ② 採用情報セクション -->
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold text-[#c5a059] mb-6 flex items-center gap-2 border-b border-[#c5a059]/30 pb-3">
+                            <i class="fa-solid fa-briefcase"></i> 募集要項・採用情報
+                        </h3>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <!-- 新卒採用 -->
+                            <div class="bg-[#152244] border border-white/10 p-5 rounded-xl flex flex-col justify-between">
+                                <div>
+                                    <span class="bg-[#c5a059] text-[#0b1329] text-[10px] font-bold px-2 py-0.5 rounded inline-block mb-3">新卒採用</span>
+                                    <h4 class="text-sm font-bold mb-2">Webマーケティング総合職</h4>
+                                    <ul class="text-[11px] text-gray-300 space-y-1.5 font-light mb-4">
+                                        <li>・対象: 2027年卒（学部・学科不問）</li>
+                                        <li>・給与: 月給 220,000円〜</li>
+                                        <li>・勤務地: 仙台本社（転勤なし）</li>
+                                    </ul>
+                                </div>
+                                <a href="https://lin.ee/wIPsUuG" target="_blank" class="block text-center bg-white/10 hover:bg-[#c5a059] hover:text-[#0b1329] text-xs font-bold py-2 rounded-lg transition border border-white/10">LINEからエントリー &rarr;</a>
+                            </div>
+
+                            <!-- インターン -->
+                            <div class="bg-[#152244] border border-white/10 p-5 rounded-xl flex flex-col justify-between">
+                                <div>
+                                    <span class="bg-blue-500/20 text-blue-300 border border-blue-500/40 text-[10px] font-bold px-2 py-0.5 rounded inline-block mb-3">長期インターン</span>
+                                    <h4 class="text-sm font-bold mb-2">SNSマーケター育成枠</h4>
+                                    <ul class="text-[11px] text-gray-300 space-y-1.5 font-light mb-4">
+                                        <li>・対象: 大学1〜4年生（週2日〜OK）</li>
+                                        <li>・時給: 1,100円〜 + 交通費支給</li>
+                                        <li>・内容: 実際のSNS企画・データ分析</li>
+                                    </ul>
+                                </div>
+                                <a href="https://lin.ee/wIPsUuG" target="_blank" class="block text-center bg-white/10 hover:bg-[#c5a059] hover:text-[#0b1329] text-xs font-bold py-2 rounded-lg transition border border-white/10">LINEから話を聞いてみる &rarr;</a>
+                            </div>
+
+                            <!-- アルバイト -->
+                            <div class="bg-[#152244] border border-white/10 p-5 rounded-xl flex flex-col justify-between">
+                                <div>
+                                    <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] font-bold px-2 py-0.5 rounded inline-block mb-3">有償アルバイト</span>
+                                    <h4 class="text-sm font-bold mb-2">クリエイティブアシスタント</h4>
+                                    <ul class="text-[11px] text-gray-300 space-y-1.5 font-light mb-4">
+                                        <li>・対象: 現役学生（未経験OK）</li>
+                                        <li>・時給: 1,000円〜</li>
+                                        <li>・内容: 画像編集・動画カット・事務</li>
+                                    </ul>
+                                </div>
+                                <a href="https://lin.ee/wIPsUuG" target="_blank" class="block text-center bg-white/10 hover:bg-[#c5a059] hover:text-[#0b1329] text-xs font-bold py-2 rounded-lg transition border border-white/10">LINEから質問する &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+
+            <!-- 企業カード 2（サンプル） -->
+            <article class="bg-[#121c36] border border-white/10 rounded-2xl md:rounded-3xl overflow-hidden backdrop-blur-xl shadow-2xl transition-all" data-aos="fade-up" data-aos-delay="100">
+                <div class="grid grid-cols-1 lg:grid-cols-12">
+                    <div class="lg:col-span-5 bg-[#182647] flex flex-col items-center justify-center p-6 md:p-8 border-b lg:border-b-0 lg:border-r border-white/10 min-h-[200px] relative overflow-hidden">
+                        <i class="fa-solid fa-laptop-code text-4xl text-[#c5a059]/40 mb-3"></i>
+                        <span class="text-[#c5a059] text-xs font-bold border border-[#c5a059]/40 px-3 py-1 rounded-full bg-[#c5a059]/10 text-center">株式会社テクノロジーラボ</span>
+                        <p class="text-[10px] text-gray-400 mt-2">システム開発・AI事業 / 仙台市青葉区</p>
+                    </div>
+                    
+                    <div class="lg:col-span-7 p-5 md:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="bg-[#c5a059] text-[#0b1329] text-[10px] font-bold px-2.5 py-0.5 rounded-md">新卒採用あり</span>
+                                <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] px-2.5 py-0.5 rounded-md">有償インターン</span>
+                            </div>
+                            <h2 class="text-lg md:text-2xl font-bold text-white mb-2">「学生のうちに『本物のビジネス』を体感してほしい」</h2>
+                            <p class="text-xs text-[#c5a059] font-bold mb-3">代表取締役 宮城 花子 氏 Interview</p>
+                            <p class="text-gray-300 text-xs md:text-sm leading-relaxed font-light mb-4">
+                                最新テクノロジーで地域の DX を推進。プログラミング経験ゼロからでも熱意があれば飛び込める現場のリアル。
+                            </p>
+                        </div>
+                        
+                        <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+                            <span class="text-[10px] md:text-xs text-gray-400">募集職種: エンジニア / 営業アシスタント</span>
+                            <button onclick="toggleDetail('sponsor-2', this)" class="inline-flex items-center gap-2 text-xs text-[#c5a059] font-bold hover:brightness-125 transition bg-[#c5a059]/10 px-4 py-2 rounded-xl border border-[#c5a059]/30">
+                                <span>取材記事・採用情報を見る</span>
+                                <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 開閉エリア -->
+                <div id="sponsor-2" class="hidden border-t border-white/10 bg-[#0c1429] p-5 md:p-10 space-y-10">
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold text-[#c5a059] mb-6 flex items-center gap-2 border-b border-[#c5a059]/30 pb-3">
+                            <i class="fa-solid fa-comments"></i> SCOPE 独自取材インタビュー
+                        </h3>
+                        <div class="space-y-6">
+                            <div class="bg-white/[0.02] border border-white/5 rounded-xl p-4">
+                                <h4 class="text-xs md:text-sm font-bold text-[#e5c583] mb-2 flex items-start gap-2">
+                                    <span class="bg-[#c5a059] text-[#0b1329] text-[10px] px-1.5 py-0.5 rounded shrink-0 font-extrabold">Q1</span>
+                                    御社はどんな会社で、どのような強みがありますか？
+                                </h4>
+                                <p class="text-xs md:text-sm text-gray-300 font-light leading-relaxed pl-6">
+                                    地域の小規模事業者様向けに受託開発や生成AIを活用した業務効率化ツールを提供しています。顧客に寄り添う提案力が強みです。
+                                </p>
+                            </div>
+                            <div class="bg-white/[0.02] border border-white/5 rounded-xl p-4">
+                                <h4 class="text-xs md:text-sm font-bold text-[#e5c583] mb-2 flex items-start gap-2">
+                                    <span class="bg-[#c5a059] text-[#0b1329] text-[10px] px-1.5 py-0.5 rounded shrink-0 font-extrabold">Q2</span>
+                                    最後に、学生に向けてメッセージをお願いします！
+                                </h4>
+                                <p class="text-xs md:text-sm text-gray-300 font-light leading-relaxed pl-6">
+                                    「まだ何がやりたいか分からない」という人にこそ来てほしいです。実際に手を動かして働くことで見えてくる世界があります！
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer class="mt-auto text-center py-6 md:py-10 border-t border-white/10 text-[10px] md:text-xs text-gray-500 bg-[#070c1a]">
+        <p>&copy; 2026 SCOPE 学生実行委員会. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 900, once: true, easing: 'ease-out-cubic' });
+
+        // 取材記事・採用情報の開閉スクリプト
+        function toggleDetail(id, btn) {
+            const detailArea = document.getElementById(id);
+            const icon = btn.querySelector('i');
+            
+            if (detailArea.classList.contains('hidden')) {
+                detailArea.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                detailArea.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+    </script>
+</body>
+</html>

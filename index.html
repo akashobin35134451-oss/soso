@@ -3,51 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCOPE | 宮城の学生×経営者のビジネス交流会</title>
-    <!-- Google Fonts (美しい明朝体) -->
+    <title>SCOPE | 学生×経営者のビジネス交流会</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Tailwind CSS (デザイン調整用) -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body class="bg-[#111e38] text-white font-serif min-h-screen flex flex-col">
+<body class="bg-[#0b1329] text-white font-serif md:h-screen md:overflow-y-scroll md:snap-y md:snap-mandatory selection:bg-[#c5a059] selection:text-[#111e38] overflow-x-hidden">
 
-    <!-- ヘッダーナビゲーション -->
-   <header class="sticky top-0 z-50 w-full px-6 flex flex-col sm:flex-row justify-between items-center gap-4 border-b border-white/10 bg-white/[0.06] backdrop-blur-md shadow-lg shadow-black/10 h-16 md:h-20">
-        <div class="flex items-center">
-            <img src="logo.PNG" alt="SCOPE" class="h-8 md:h-9 w-auto object-contain">
+    <div class="fixed inset-0 pointer-events-none z-0">
+        <div class="absolute top-[-10%] left-[-10%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-[#c5a059]/10 rounded-full blur-[100px] md:blur-[120px]"></div>
+        <div class="absolute top-[40%] right-[-10%] w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-[#1e3a8a]/20 rounded-full blur-[120px] md:blur-[150px]"></div>
+        <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#c5a059_1px,transparent_1px)] [background-size:24px_24px]"></div>
+    </div>
+
+    <header class="fixed top-0 left-0 z-50 w-full px-4 md:px-6 flex items-center justify-between border-b border-white/10 bg-[#0b1329]/90 backdrop-blur-xl shadow-lg h-16 md:h-20 transition-all">
+        <div class="flex items-center shrink-0">
+            <a href="index.html">
+                <img src="logo.PNG" alt="SCOPE" class="h-7 md:h-9 w-auto object-contain">
+            </a>
         </div>
         
-        <nav class="flex items-center space-x-6 text-xs md:text-sm font-medium text-gray-200">
-            <a href="about.html" class="hover:text-[#c5a059] transition">ABOUT</a>
-            <a href="#" class="hover:text-[#c5a059] transition">EVENT</a>
-            <a href="https://lin.ee/wIPsUuG" target="_blank" rel="noopener noreferrer" class="border border-[#c5a059] text-[#c5a059] px-4 py-1.5 rounded hover:bg-[#c5a059] hover:text-[#111e38] transition whitespace-nowrap">LINE登録</a>
+        <nav class="flex items-center space-x-4 md:space-x-6 text-xs md:text-sm font-medium text-gray-200 overflow-x-auto no-scrollbar py-2">
+            <a href="index.html" class="relative py-1 text-[#c5a059] font-bold whitespace-nowrap after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#c5a059]">HOME</a>
+            <a href="about.html" class="relative py-1 hover:text-[#c5a059] transition-colors whitespace-nowrap after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#c5a059] hover:after:w-full after:transition-all after:duration-300">ABOUT</a>
+            <a href="event.html" class="relative py-1 hover:text-[#c5a059] transition-colors whitespace-nowrap after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#c5a059] hover:after:w-full after:transition-all after:duration-300">EVENT</a>
+            <a href="sponsors.html" class="relative py-1 hover:text-[#c5a059] transition-colors whitespace-nowrap after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#c5a059] hover:after:w-full after:transition-all after:duration-300">SPONSORS</a>
+            <a href="https://lin.ee/wIPsUuG" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-[#c5a059] to-[#dfba73] text-[#0b1329] px-4 md:px-5 py-1.5 md:py-2 rounded-full font-bold hover:brightness-110 transition shadow-[0_0_15px_rgba(197,160,89,0.4)] whitespace-nowrap text-xs">LINE登録</a>
         </nav>
     </header>
 
-    <!-- メインビジュアル -->
-    <section class="relative bg-[#111e38] text-white py-32 px-6 overflow-hidden min-h-[60vh] flex items-center">
-        <!-- 背景のうっすらとした幾何学模様のニュアンス演出 -->
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#c5a059_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        
-        <div class="max-w-4xl mx-auto text-center relative z-10">
-            <p class="text-[#c5a059] tracking-[0.2em] text-sm md:text-base font-medium mb-4 font-serif">宮城の学生×経営者のビジネス交流会</p>
-            <h1 class="text-2xl md:text-4xl font-bold leading-relaxed font-serif tracking-wide mb-8 max-w-5xl mx-auto break-keep">
-             経営者の本音に触れ、<br class="md:hidden">キャリアを掴み取る
-            </h1>
-            <div class="w-16 h-[1px] bg-[#c5a059] mx-auto mb-8"></div>
-            <p class="text-sm md:text-lg max-w-2xl mx-auto leading-relaxed text-gray-300">
-                SCOPEは、単なる会社説明会ではありません。企業のビジョンや経営者様の「本音」をぶつけ、それに共鳴する学生のポテンシャルを直接見極めていただく、超至近距離のビジネス交流会です。
-            </p>
-        </div>
-    </section>
+    <main class="w-full">
+        <section class="min-h-screen md:h-screen w-full md:snap-start flex items-center justify-center text-center px-4 md:px-6 pt-24 pb-12 relative z-10 box-border">
+            <div class="absolute inset-0 z-0 opacity-20 bg-cover bg-center" style="background-image: url('hero_bg.jpg');"></div>
+            
+            <div class="max-w-4xl mx-auto relative z-10 my-auto" data-aos="zoom-out-up" data-aos-duration="1200">
+                <div class="inline-flex items-center gap-2 border border-[#c5a059]/40 bg-[#c5a059]/10 backdrop-blur-md px-3 md:px-4 py-1 md:py-1.5 rounded-full mb-6">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#c5a059] animate-ping"></span>
+                    <span class="text-[#c5a059] tracking-[0.15em] md:tracking-[0.25em] text-[10px] md:text-xs font-light uppercase">宮城の学生×経営者 ビジネス交流会</span>
+                </div>
+                
+                <h1 class="text-lg md:text-3xl lg:text-4xl font-light tracking-wide leading-relaxed md:leading-[2.1] mb-6 text-gray-100">
+                    <span class="text-xl md:text-4xl lg:text-5xl font-normal text-white border-b border-[#c5a059]/40 pb-0.5 inline-block">経営者</span>の<span class="text-2xl md:text-5xl lg:text-6xl font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#e5c583] via-white to-[#c5a059] inline-block">本音</span>に触れ、<br>
+                    <span class="text-2xl md:text-5xl lg:text-6xl font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#e5c583] via-white to-[#c5a059] inline-block">キャリア</span>を掴み取る
+                </h1>
+                
+                <p class="text-gray-300 text-xs md:text-sm leading-relaxed max-w-xl mx-auto mb-8 font-light">
+                    お堅い企業説明会の枠を打ち破る、熱気溢れるラフなビジネス交流会。<br class="hidden sm:inline">本音で語り合い、共鳴し合える「最高の出会い」がここにある。
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+                    <a href="event.html" class="w-full sm:w-auto bg-gradient-to-r from-[#c5a059] via-[#d4b26f] to-[#c5a059] text-[#0b1329] font-bold px-8 py-3 rounded-xl hover:brightness-110 transition text-xs md:text-sm shadow-lg">次回イベント情報</a>
+                    <a href="about.html" class="w-full sm:w-auto border border-white/20 bg-white/5 backdrop-blur-md hover:border-[#c5a059] px-8 py-3 rounded-xl transition text-xs md:text-sm font-bold">SCOPEについて</a>
+                </div>
+            </div>
+        </section>
 
-    <!-- フッター -->
-    <footer class="w-full bg-[#111e38] text-gray-400 text-xs text-center py-8 border-t border-gray-800/50 mt-auto">
-        <p>&copy; 2026 SCOPE 学生実行委員会. All Rights Reserved.</p>
-    </footer>
+        <section class="min-h-screen md:h-screen w-full md:snap-start flex items-center justify-center px-4 md:px-6 py-20 relative z-10 border-t border-white/10 box-border">
+            <div class="max-w-6xl w-full mx-auto my-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center" data-aos="fade-up">
+                    <div>
+                        <span class="text-[#c5a059] text-xs font-bold tracking-[0.3em] uppercase block mb-2">Concept</span>
+                        <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6">SCOPEとは</h2>
+                        <p class="text-gray-300 text-xs md:text-base leading-relaxed mb-6 md:mb-8 font-light">
+                            就活セミナーや企業説明会のお堅い雰囲気とは異なり、カジュアルに盛り上がりながら本音で語り合えるラフなビジネス交流会です。学生と経営者のマッチングだけでなく、切磋琢磨できる仲間との出会いも創出します。
+                        </p>
+                        <a href="about.html" class="inline-flex items-center gap-2 text-[#c5a059] font-bold text-xs md:text-sm hover:underline">
+                            SCOPEのコンセプト・団体概要を見る <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="bg-gradient-to-br from-[#152347] to-[#0f1a36] p-6 md:p-10 border border-white/10 rounded-2xl text-center shadow-2xl">
+                        <i class="fa-solid fa-handshake text-4xl md:text-6xl text-[#c5a059] mb-4 md:mb-6"></i>
+                        <h3 class="font-bold text-base md:text-xl mb-2 md:mb-3">学生 × 経営者の直接マッチング</h3>
+                        <p class="text-xs md:text-sm text-gray-400 leading-relaxed">双方の「本音」が交差する、新しい形の交流プラットフォーム</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section class="min-h-screen md:h-screen w-full md:snap-start flex items-center justify-center px-4 md:px-6 py-20 relative z-10 border-t border-white/10 box-border bg-[#0a1021]/50 backdrop-blur-md">
+            <div class="max-w-6xl w-full mx-auto my-auto">
+                <div class="text-center mb-6 md:mb-12" data-aos="fade-up">
+                    <span class="text-[#c5a059] text-xs font-bold tracking-[0.3em] uppercase block mb-2">Next Schedule</span>
+                    <h2 class="text-2xl md:text-3xl font-bold">次回イベント案内</h2>
+                </div>
+                <div class="bg-gradient-to-b from-[#152347] to-[#0a1226] border-2 border-[#c5a059] rounded-3xl p-6 md:p-12 text-center max-w-3xl mx-auto shadow-2xl" data-aos="zoom-in">
+                    <span class="bg-[#c5a059] text-[#0b1329] font-bold text-xs px-3 py-1 rounded-full">第3回 SCOPE</span>
+                    <h3 class="text-xl md:text-4xl font-extrabold my-4 md:my-6">2026年10月14日（水）</h3>
+                    <p class="text-xs md:text-base text-gray-300 mb-6 md:mb-8"><i class="fa-solid fa-location-dot text-[#c5a059] mr-1"></i> 青葉の風テラス（国際センター駅2階直結）</p>
+                    <a href="event.html" class="inline-block bg-[#c5a059] text-[#0b1329] font-bold px-6 md:px-8 py-3 md:py-3.5 rounded-xl hover:brightness-110 transition text-xs md:text-sm shadow-lg">
+                        タイムスケジュール・参加手順を見る
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="min-h-screen md:h-screen w-full md:snap-start flex flex-col justify-between items-center pt-24 relative z-10 border-t border-white/10 box-border">
+            <div class="max-w-6xl w-full mx-auto px-4 md:px-6 my-auto text-center" data-aos="fade-up">
+                <span class="text-[#c5a059] text-xs font-bold tracking-[0.3em] uppercase block mb-2">Partners</span>
+                <h2 class="text-2xl md:text-4xl font-bold mb-4">協賛企業・取材記事</h2>
+                <p class="text-xs md:text-sm text-gray-400 mb-8 max-w-lg mx-auto font-light leading-relaxed">
+                    SCOPEを応援する企業様の取材インタビューや採用情報を掲載しています。
+                </p>
+                <a href="sponsors.html" class="inline-block border border-[#c5a059] text-[#c5a059] font-bold px-6 md:px-8 py-3 md:py-4 rounded-xl hover:bg-[#c5a059] hover:text-[#0b1329] transition text-xs md:text-base shadow-lg">
+                    企業インタビュー・採用情報一覧へ
+                </a>
+            </div>
+
+            <footer class="w-full text-center py-6 border-t border-white/10 text-[10px] md:text-xs text-gray-500 bg-[#070c1a] mt-auto">
+                <p>&copy; 2026 SCOPE 学生実行委員会. All Rights Reserved.</p>
+            </footer>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 900, once: true, easing: 'ease-out-cubic' });
+    </script>
 </body>
 </html>

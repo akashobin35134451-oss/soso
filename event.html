@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENT | SCOPE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-[#0b1329] text-white font-serif md:h-screen md:overflow-y-scroll md:snap-y md:snap-mandatory selection:bg-[#c5a059] selection:text-[#111e38] overflow-x-hidden">
+
+    <div class="fixed inset-0 pointer-events-none z-0">
+        <div class="absolute top-[-10%] right-[-10%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-[#c5a059]/10 rounded-full blur-[100px] md:blur-[120px]"></div>
+        <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#c5a059_1px,transparent_1px)] [background-size:24px_24px]"></div>
+    </div>
+
+    <header class="fixed top-0 left-0 z-50 w-full px-4 md:px-6 flex items-center justify-between border-b border-white/10 bg-[#0b1329]/90 backdrop-blur-xl shadow-lg h-16 md:h-20 transition-all">
+        <div class="flex items-center shrink-0">
+            <a href="index.html">
+                <img src="logo.PNG" alt="SCOPE" class="h-7 md:h-9 w-auto object-contain">
+            </a>
+        </div>
+        <nav class="flex items-center space-x-4 md:space-x-6 text-xs md:text-sm font-medium text-gray-200 overflow-x-auto no-scrollbar py-2">
+            <a href="index.html" class="relative py-1 hover:text-[#c5a059] transition-colors whitespace-nowrap after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#c5a059] hover:after:w-full after:transition-all after:duration-300">HOME</a>
+            <a href="about.html" class="relative py-1 hover:text-[#c5a059] transition-colors whitespace-nowrap after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#c5a059] hover:after:w-full after:transition-all after:duration-300">ABOUT</a>
+            <a href="event.html" class="relative py-1 text-[#c5a059] font-bold whitespace-nowrap after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#c5a059]">EVENT</a>
+            <a href="sponsors.html" class="relative py-1 hover:text-[#c5a059] transition-colors whitespace-nowrap after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#c5a059] hover:after:w-full after:transition-all after:duration-300">SPONSORS</a>
+            <a href="https://lin.ee/wIPsUuG" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-[#c5a059] to-[#dfba73] text-[#0b1329] px-4 md:px-5 py-1.5 md:py-2 rounded-full font-bold hover:brightness-110 transition shadow-[0_0_15px_rgba(197,160,89,0.4)] whitespace-nowrap text-xs">LINE登録</a>
+        </nav>
+    </header>
+
+    <main class="w-full">
+
+        <section class="min-h-screen md:h-screen w-full md:snap-start flex flex-col justify-center items-center px-4 md:px-6 pt-24 pb-12 relative z-10 box-border">
+            <div class="max-w-6xl w-full mx-auto my-auto flex flex-col justify-center">
+                <div class="text-center mb-4 md:mb-6" data-aos="fade-up">
+                    <span class="text-[#c5a059] text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase block mb-1">Next Schedule</span>
+                    <h1 class="text-xl md:text-4xl font-bold">EVENT</h1>
+                    <div class="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#c5a059] to-transparent mx-auto mt-2"></div>
+                </div>
+
+                <div class="relative group" data-aos="zoom-in-up">
+                    <div class="relative bg-gradient-to-b from-[#152347] via-[#0f1a36] to-[#0a1226] border-2 border-[#c5a059] rounded-2xl md:rounded-3xl p-5 md:p-8 shadow-2xl overflow-hidden">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-3 md:mb-4">
+                            <span class="bg-[#c5a059] text-[#0b1329] font-extrabold text-[10px] md:text-xs px-2.5 py-1 rounded-full">NEXT EVENT</span>
+                            <span class="text-[#c5a059] font-bold text-xs md:text-sm tracking-widest">第3回 SCOPE</span>
+                        </div>
+
+                        <h2 class="text-xl md:text-4xl font-extrabold mb-4 md:mb-6 text-white tracking-wide">
+                            2026年10月14日<span class="text-sm md:text-2xl font-normal text-[#c5a059] ml-1 md:ml-2">（水）</span>
+                        </h2>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6 mb-5 md:mb-6">
+                            <div class="lg:col-span-5 bg-white/5 border border-white/10 rounded-xl md:rounded-2xl overflow-hidden flex flex-col justify-between">
+                                <div class="h-24 md:h-32 bg-[#1a2947] relative overflow-hidden flex items-center justify-center">
+                                    <img src="event_venue.jpg" alt="青葉の風テラス" class="w-full h-full object-cover opacity-60">
+                                    <span class="absolute bottom-2 left-3 text-[9px] md:text-[10px] bg-black/60 px-2 py-0.5 rounded text-gray-300">会場イメージ</span>
+                                </div>
+                                <div class="p-3 md:p-4">
+                                    <span class="text-[10px] md:text-xs text-[#c5a059] font-bold block mb-1 uppercase tracking-wider">
+                                        <i class="fa-solid fa-location-dot mr-1"></i> 開催場所
+                                    </span>
+                                    <h3 class="text-sm md:text-lg font-bold text-white mb-1">青葉の風テラス</h3>
+                                    <p class="text-[10px] md:text-xs text-gray-300 leading-relaxed font-light">
+                                        〒980-0856 宮城県仙台市青葉区青葉山2-1<br>
+                                        （地下鉄東西線「国際センター駅」2階直結）
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="lg:col-span-7 bg-white/5 border border-white/10 rounded-xl md:rounded-2xl p-3 md:p-5 backdrop-blur-md">
+                                <span class="text-[10px] md:text-xs text-[#c5a059] font-bold block mb-2 md:mb-3 uppercase tracking-wider">
+                                    <i class="fa-regular fa-clock mr-1"></i> タイムスケジュール（予定）
+                                </span>
+                                
+                                <div class="space-y-1.5 md:space-y-2 relative before:absolute before:left-10 md:before:left-12 before:top-2 before:bottom-2 before:w-0.5 before:bg-[#c5a059]/30">
+                                    <div class="flex items-center gap-2.5 md:gap-3 text-[10px] md:text-xs">
+                                        <span class="font-bold text-[#c5a059] w-8 md:w-10 text-right">18:00</span>
+                                        <span class="w-2 h-2 rounded-full bg-[#c5a059] border-2 border-[#111e38] z-10 shrink-0"></span>
+                                        <span class="text-gray-200">開場</span>
+                                    </div>
+                                    <div class="flex items-center gap-2.5 md:gap-3 text-[10px] md:text-xs">
+                                        <span class="font-bold text-[#c5a059] w-8 md:w-10 text-right">18:30</span>
+                                        <span class="w-2 h-2 rounded-full bg-[#c5a059] border-2 border-[#111e38] z-10 shrink-0"></span>
+                                        <span class="text-gray-200">オープニング</span>
+                                    </div>
+                                    <div class="flex items-center gap-2.5 md:gap-3 text-[10px] md:text-xs">
+                                        <span class="font-bold text-[#c5a059] w-8 md:w-10 text-right">18:40</span>
+                                        <span class="w-2 h-2 rounded-full bg-[#c5a059] border-2 border-[#111e38] z-10 shrink-0"></span>
+                                        <span class="text-gray-200">グループセッション①</span>
+                                    </div>
+                                    <div class="flex items-center gap-2.5 md:gap-3 text-[10px] md:text-xs">
+                                        <span class="font-bold text-[#c5a059] w-8 md:w-10 text-right">19:15</span>
+                                        <span class="w-2 h-2 rounded-full bg-[#c5a059] border-2 border-[#111e38] z-10 shrink-0"></span>
+                                        <span class="text-gray-200">グループセッション②</span>
+                                    </div>
+                                    <div class="flex items-center gap-2.5 md:gap-3 text-[10px] md:text-xs">
+                                        <span class="font-bold text-[#c5a059] w-8 md:w-10 text-right">19:45</span>
+                                        <span class="w-2 h-2 rounded-full bg-[#c5a059] border-2 border-[#111e38] z-10 shrink-0"></span>
+                                        <span class="text-gray-200">企業ピッチ</span>
+                                    </div>
+                                    <div class="flex items-center gap-2.5 md:gap-3 text-[10px] md:text-xs">
+                                        <span class="font-bold text-[#c5a059] w-8 md:w-10 text-right">19:55</span>
+                                        <span class="w-2 h-2 rounded-full bg-[#c5a059] border-2 border-[#111e38] z-10 shrink-0"></span>
+                                        <span class="text-gray-200 font-bold text-[#e5c583]">フリー交流（本音トーク）</span>
+                                    </div>
+                                    <div class="flex items-center gap-2.5 md:gap-3 text-[10px] md:text-xs">
+                                        <span class="font-bold text-[#c5a059] w-8 md:w-10 text-right">20:30</span>
+                                        <span class="w-2 h-2 rounded-full bg-gray-500 border-2 border-[#111e38] z-10 shrink-0"></span>
+                                        <span class="text-gray-400">閉会</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <a href="https://lin.ee/wIPsUuG" target="_blank" rel="noopener noreferrer" class="inline-block bg-[#c5a059] text-[#0b1329] font-extrabold text-xs md:text-base px-6 md:px-8 py-3 rounded-xl hover:brightness-110 transition shadow-xl">
+                                公式LINEから参加申し込み &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="min-h-screen md:h-screen w-full md:snap-start flex flex-col justify-center items-center px-4 md:px-6 py-20 bg-[#0a1021]/80 border-y border-white/10 relative z-10 box-border backdrop-blur-md">
+            <div class="max-w-6xl w-full mx-auto my-auto flex flex-col justify-center">
+                <div class="text-center mb-8 md:mb-10" data-aos="fade-up">
+                    <span class="text-[#c5a059] text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase block mb-1">Flow</span>
+                    <h2 class="text-2xl md:text-4xl font-bold">参加までの 4 STEP</h2>
+                    <div class="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#c5a059] to-transparent mx-auto mt-2"></div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                    <div class="bg-[#121d38] border border-white/10 p-5 md:p-6 rounded-2xl text-center shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-10 md:w-12 h-10 md:h-12 rounded-full bg-[#c5a059]/20 text-[#c5a059] flex items-center justify-center text-lg md:text-xl mx-auto mb-3 md:mb-4 border border-[#c5a059]/40">
+                            <i class="fa-brands fa-line"></i>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-[#c5a059] font-bold block mb-1">STEP 01</span>
+                        <h3 class="font-bold text-sm md:text-base mb-1 md:mb-2">LINE友達追加</h3>
+                        <p class="text-[11px] md:text-xs text-gray-400 leading-relaxed">サイト内の「LINE登録」ボタンから公式アカウントを追加</p>
+                    </div>
+                    
+                    <div class="bg-[#121d38] border border-white/10 p-5 md:p-6 rounded-2xl text-center shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-10 md:w-12 h-10 md:h-12 rounded-full bg-[#c5a059]/20 text-[#c5a059] flex items-center justify-center text-lg md:text-xl mx-auto mb-3 md:mb-4 border border-[#c5a059]/40">
+                            <i class="fa-regular fa-id-card"></i>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-[#c5a059] font-bold block mb-1">STEP 02</span>
+                        <h3 class="font-bold text-sm md:text-base mb-1 md:mb-2">プロフィール登録</h3>
+                        <p class="text-[11px] md:text-xs text-gray-400 leading-relaxed">メニューから簡単なプロフィールを入力して送信</p>
+                    </div>
+
+                    <div class="bg-[#121d38] border border-white/10 p-5 md:p-6 rounded-2xl text-center shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                        <div class="w-10 md:w-12 h-10 md:h-12 rounded-full bg-[#c5a059]/20 text-[#c5a059] flex items-center justify-center text-lg md:text-xl mx-auto mb-3 md:mb-4 border border-[#c5a059]/40">
+                            <i class="fa-regular fa-paper-plane"></i>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-[#c5a059] font-bold block mb-1">STEP 03</span>
+                        <h3 class="font-bold text-sm md:text-base mb-1 md:mb-2">参加申し込み</h3>
+                        <p class="text-[11px] md:text-xs text-gray-400 leading-relaxed">LINEの申込フォームから希望イベントを選択して送信</p>
+                    </div>
+
+                    <div class="bg-gradient-to-b from-[#1e2f57] to-[#121d38] border border-[#c5a059] p-5 md:p-6 rounded-2xl text-center shadow-xl" data-aos="fade-up" data-aos-delay="400">
+                        <div class="w-10 md:w-12 h-10 md:h-12 rounded-full bg-[#c5a059] text-[#0b1329] flex items-center justify-center text-lg md:text-xl mx-auto mb-3 md:mb-4 font-bold shadow-md">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-[#c5a059] font-bold block mb-1">STEP 04</span>
+                        <h3 class="font-bold text-sm md:text-base mb-1 md:mb-2 text-[#c5a059]">受付完了！</h3>
+                        <p class="text-[11px] md:text-xs text-gray-300 leading-relaxed">当日はお気をつけて会場までご来場ください</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="min-h-screen md:h-screen w-full md:snap-start flex flex-col justify-between items-center pt-24 relative z-10 box-border">
+            <div class="max-w-6xl w-full mx-auto px-4 md:px-6 my-auto">
+                <div class="text-center mb-8 md:mb-10" data-aos="fade-up">
+                    <span class="text-[#c5a059] text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase block mb-1">Past Events</span>
+                    <h2 class="text-2xl md:text-4xl font-bold">過去の開催実績</h2>
+                    <div class="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#c5a059] to-transparent mx-auto mt-2"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                    <div class="bg-gradient-to-b from-white/5 to-white/[0.02] border border-white/10 rounded-2xl overflow-hidden shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                        <div class="h-28 md:h-32 bg-[#182647] relative overflow-hidden flex items-center justify-center">
+                            <img src="past_0.jpg" alt="第0回SCOPE" class="w-full h-full object-cover opacity-60">
+                            <span class="absolute top-2.5 left-2.5 text-[9px] md:text-[10px] bg-[#c5a059] text-[#0b1329] font-bold px-2 py-0.5 rounded">第0回（試行）</span>
+                        </div>
+                        <div class="p-4 md:p-5">
+                            <p class="text-xs md:text-sm font-bold text-white mb-1">2026年5月24日(木)</p>
+                            <p class="text-[10px] md:text-xs text-gray-400 mb-3 md:mb-4">NIGHT CLUB 101 SENDAI</p>
+                            <div class="grid grid-cols-2 gap-2 text-center text-xs bg-[#0b1329] p-2 md:p-2.5 rounded-xl border border-white/5">
+                                <div><span class="text-gray-400 block text-[9px] md:text-[10px]">学生参加</span><strong class="text-xs md:text-sm text-white font-bold">42名</strong></div>
+                                <div><span class="text-gray-400 block text-[9px] md:text-[10px]">企業様参加</span><strong class="text-xs md:text-sm text-[#c5a059] font-bold">10名</strong></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-b from-white/5 to-white/[0.02] border border-white/10 rounded-2xl overflow-hidden shadow-xl" data-aos="fade-up" data-aos-delay="200">
+                        <div class="h-28 md:h-32 bg-[#182647] relative overflow-hidden flex items-center justify-center">
+                            <img src="past_1.jpg" alt="第1回SCOPE" class="w-full h-full object-cover opacity-60">
+                            <span class="absolute top-2.5 left-2.5 text-[9px] md:text-[10px] bg-[#c5a059] text-[#0b1329] font-bold px-2 py-0.5 rounded">第1回</span>
+                        </div>
+                        <div class="p-4 md:p-5">
+                            <p class="text-xs md:text-sm font-bold text-white mb-1">2026年6月18日(木)</p>
+                            <p class="text-[10px] md:text-xs text-gray-400 mb-3 md:mb-4">NEIGHBOR RECORDS</p>
+                            <div class="grid grid-cols-2 gap-2 text-center text-xs bg-[#0b1329] p-2 md:p-2.5 rounded-xl border border-white/5">
+                                <div><span class="text-gray-400 block text-[9px] md:text-[10px]">学生参加</span><strong class="text-xs md:text-sm text-white font-bold">44名</strong></div>
+                                <div><span class="text-gray-400 block text-[9px] md:text-[10px]">企業様参加</span><strong class="text-xs md:text-sm text-[#c5a059] font-bold">11名</strong></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-b from-white/5 to-white/[0.02] border border-white/10 rounded-2xl overflow-hidden shadow-xl" data-aos="fade-up" data-aos-delay="300">
+                        <div class="h-28 md:h-32 bg-[#182647] relative overflow-hidden flex items-center justify-center">
+                            <img src="past_2.jpg" alt="第2回SCOPE" class="w-full h-full object-cover opacity-60">
+                            <span class="absolute top-2.5 left-2.5 text-[9px] md:text-[10px] bg-[#c5a059] text-[#0b1329] font-bold px-2 py-0.5 rounded">第2回</span>
+                        </div>
+                        <div class="p-4 md:p-5">
+                            <p class="text-xs md:text-sm font-bold text-white mb-1">2026年7月10日(金)</p>
+                            <p class="text-[10px] md:text-xs text-gray-400 mb-3 md:mb-4">レンタルスペースCOMPASS</p>
+                            <div class="grid grid-cols-2 gap-2 text-center text-xs bg-[#0b1329] p-2 md:p-2.5 rounded-xl border border-white/5">
+                                <div><span class="text-gray-400 block text-[9px] md:text-[10px]">学生参加</span><strong class="text-xs md:text-sm text-white font-bold">24名</strong></div>
+                                <div><span class="text-gray-400 block text-[9px] md:text-[10px]">企業様参加</span><strong class="text-xs md:text-sm text-[#c5a059] font-bold">6名</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="w-full text-center py-6 border-t border-white/10 text-[10px] md:text-xs text-gray-500 bg-[#070c1a] mt-auto">
+                <p>&copy; 2026 SCOPE 学生実行委員会. All Rights Reserved.</p>
+            </footer>
+        </section>
+
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 900, once: true, easing: 'ease-out-cubic' });
+    </script>
+</body>
+</html>

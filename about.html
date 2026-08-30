@@ -3,129 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABOUT | SCOPE | 宮城の学生×経営者のビジネス交流会</title>
+    <title>ABOUT | SCOPE</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body class="bg-[#111e38] text-white font-serif min-h-screen flex flex-col">
+<body class="bg-[#0b1329] text-white font-serif min-h-screen flex flex-col selection:bg-[#c5a059] selection:text-[#111e38] overflow-x-hidden">
 
-    <div class="fixed inset-0 opacity-10 bg-[radial-gradient(#c5a059_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+    <div class="fixed inset-0 pointer-events-none z-0">
+        <div class="absolute top-[-10%] left-[-10%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-[#c5a059]/10 rounded-full blur-[100px] md:blur-[120px]"></div>
+        <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#c5a059_1px,transparent_1px)] [background-size:24px_24px]"></div>
+    </div>
 
-    <header class="sticky top-0 z-50 w-full px-6 flex flex-col sm:flex-row justify-between items-center gap-4 border-b border-white/10 bg-white/[0.06] backdrop-blur-md shadow-lg shadow-black/10 h-16 md:h-20">
-        <div class="flex items-center">
+    <header class="sticky top-0 z-50 w-full px-4 md:px-6 flex items-center justify-between border-b border-white/10 bg-[#0b1329]/90 backdrop-blur-xl shadow-lg h-16 md:h-20 transition-all">
+        <div class="flex items-center shrink-0">
             <a href="index.html">
-                <img src="logo.PNG" alt="SCOPE" class="h-8 md:h-9 w-auto object-contain">
+                <img src="logo.PNG" alt="SCOPE" class="h-7 md:h-9 w-auto object-contain">
             </a>
         </div>
-        
-        <nav class="flex items-center space-x-6 text-xs md:text-sm font-medium text-gray-200">
-            <a href="about.html" class="text-[#c5a059] font-bold">ABOUT</a>
-            <a href="index.html#event" class="hover:text-[#c5a059] transition">EVENT</a>
-            <a href="https://lin.ee/wIPsUuG" target="_blank" rel="noopener noreferrer" class="border border-[#c5a059] text-[#c5a059] px-4 py-1.5 rounded hover:bg-[#c5a059] hover:text-[#111e38] transition whitespace-nowrap">LINE登録</a>
+        <nav class="flex items-center space-x-4 md:space-x-6 text-xs md:text-sm font-medium text-gray-200 overflow-x-auto no-scrollbar py-2">
+            <a href="index.html" class="relative py-1 hover:text-[#c5a059] transition-colors whitespace-nowrap after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#c5a059] hover:after:w-full after:transition-all after:duration-300">HOME</a>
+            <a href="about.html" class="relative py-1 text-[#c5a059] font-bold whitespace-nowrap after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#c5a059]">ABOUT</a>
+            <a href="event.html" class="relative py-1 hover:text-[#c5a059] transition-colors whitespace-nowrap after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#c5a059] hover:after:w-full after:transition-all after:duration-300">EVENT</a>
+            <a href="sponsors.html" class="relative py-1 hover:text-[#c5a059] transition-colors whitespace-nowrap after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#c5a059] hover:after:w-full after:transition-all after:duration-300">SPONSORS</a>
+            <a href="https://lin.ee/wIPsUuG" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-[#c5a059] to-[#dfba73] text-[#0b1329] px-4 md:px-5 py-1.5 md:py-2 rounded-full font-bold hover:brightness-110 transition shadow-[0_0_15px_rgba(197,160,89,0.4)] whitespace-nowrap text-xs">LINE登録</a>
         </nav>
     </header>
 
-    <main class="flex-grow max-w-4xl w-full mx-auto px-6 py-12 md:py-20 relative z-10">
-        
-        <div class="text-center mb-16">
-            <p class="text-[#c5a059] tracking-[0.2em] text-sm font-medium mb-2">SCOPEについて</p>
-            <h1 class="text-3xl md:text-4xl font-bold tracking-wide">ABOUT</h1>
-            <div class="w-12 h-[1px] bg-[#c5a059] mx-auto mt-4"></div>
+    <main class="flex-grow max-w-6xl w-full mx-auto px-4 md:px-6 py-12 md:py-20 relative z-10">
+        <div class="text-center mb-12 md:mb-20" data-aos="fade-up">
+            <span class="text-[#c5a059] text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase block mb-2">Concept & Profile</span>
+            <h1 class="text-2xl md:text-5xl font-bold">ABOUT</h1>
+            <div class="w-12 md:w-16 h-[2px] md:h-[3px] bg-gradient-to-r from-transparent via-[#c5a059] to-transparent mx-auto mt-4"></div>
         </div>
 
-        <section class="mb-20 bg-white/[0.03] border border-white/5 rounded-xl p-8 md:p-12 backdrop-blur-sm">
-            <h2 class="text-xl md:text-2xl font-bold text-[#c5a059] mb-6 flex items-center gap-3">
-                <span class="w-1.5 h-6 bg-[#c5a059] inline-block"></span>
-                SCOPE のイベントコンセプト
-            </h2>
-            <p class="text-gray-200 leading-relaxed text-sm md:text-base mb-8">
-                よくある就活セミナーや企業説明会等のお堅い雰囲気とは違い、カジュアルに楽しく盛り上がりながらも、参加者同士が本音でぶつかり共鳴し合える、熱気溢れるラフなビジネス交流会を目指しています。
-            </p>
+        <div class="relative group mb-12 md:mb-20" data-aos="fade-up">
+            <div class="relative bg-[#111c38]/90 border border-white/15 rounded-2xl md:rounded-3xl p-5 md:p-14 backdrop-blur-2xl shadow-2xl">
+                <h2 class="text-xl md:text-3xl font-bold text-[#c5a059] mb-6 md:mb-8 flex items-center gap-3">
+                    <span class="w-1.5 md:w-2 h-6 md:h-8 bg-gradient-to-b from-[#e5c583] to-[#c5a059] rounded-full"></span>
+                    SCOPE のイベントコンセプト
+                </h2>
+                <p class="text-gray-200 leading-relaxed text-xs md:text-lg mb-8 md:mb-12 font-light">
+                    よくある就活セミナーや企業説明会等のお堅い雰囲気とは違い、カジュアルに楽しく盛り上がりながらも、参加者同士が本音でぶつかり共鳴し合える、熱気溢れるラフなビジネス交流会を目指しています。<br><br>
+                    また、学生同士・経営者同士の出会いも同時に生まれるので、切磋琢磨し高めあえる仲間とつながることもできます。
+                </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-[#1a2947] border border-white/10 rounded-lg p-6">
-                    <h3 class="font-bold text-white mb-3 flex items-center gap-2">
-                        <span class="text-[#c5a059]">●</span> 経営者と繋がりたい学生
-                    </h3>
-                    <ul class="text-gray-300 text-sm space-y-2 list-disc list-inside">
-                        <li>就活の意識をより高く持ちたい</li>
-                        <li>経営者と直接本音で話してみたい</li>
-                        <li>将来のキャリアに漠然とした不安がある</li>
-                    </ul>
-                </div>
-                <div class="bg-[#1a2947] border border-white/10 rounded-lg p-6">
-                    <h3 class="font-bold text-white mb-3 flex items-center gap-2">
-                        <span class="text-[#c5a059]">●</span> 学生と繋がりたい経営者
-                    </h3>
-                    <ul class="text-gray-300 text-sm space-y-2 list-disc list-inside">
-                        <li>最近の学生の「生の声」を聞きたい</li>
-                        <li>次世代のコア人材の採用に繋げたい</li>
-                        <li>夢を持って頑張っている学生を応援したい</li>
-                    </ul>
-                </div>
-            </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                    <div class="bg-gradient-to-b from-[#1a294d] to-[#121f3d] border border-[#c5a059]/30 rounded-2xl p-5 md:p-7">
+                        <div class="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 pb-3 md:pb-4 border-b border-white/10">
+                            <div class="w-10 md:w-12 h-10 md:h-12 rounded-full bg-[#c5a059]/20 flex items-center justify-center border border-[#c5a059]/50 text-[#c5a059] text-lg md:text-xl shrink-0">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-[#e5c583] text-base md:text-lg">経営者と繋がりたい学生</h3>
+                                <span class="text-[10px] md:text-xs text-gray-400">就活意識・キャリア意識の高い学生</span>
+                            </div>
+                        </div>
+                        <ul class="text-gray-300 text-xs md:text-sm space-y-2.5 md:space-y-3 font-light">
+                            <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#c5a059] mt-1 shrink-0"></i> 就職活動への意識が高く行動したい</li>
+                            <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#c5a059] mt-1 shrink-0"></i> 経営者と直接本音で対話したい</li>
+                            <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#c5a059] mt-1 shrink-0"></i> 将来のキャリアや自分の可能性を広げたい</li>
+                        </ul>
+                    </div>
 
-            <p class="text-gray-200 leading-relaxed text-sm md:text-base mt-8 pt-6 border-t border-white/10">
-                また、学生同士・経営者同士の出会いも同時に生まれるため、同じ熱量で切磋琢磨し、互いを高めあえる最高の仲間と繋がることができます。
-            </p>
-        </section>
-
-        <section class="bg-white/[0.03] border border-white/5 rounded-xl p-8 md:p-12 backdrop-blur-sm">
-            <h2 class="text-xl md:text-2xl font-bold text-[#c5a059] mb-8 flex items-center gap-3">
-                <span class="w-1.5 h-6 bg-[#c5a059] inline-block"></span>
-                団体情報
-            </h2>
-            
-            <div class="border-t border-white/10 text-sm md:text-base">
-                <div class="flex flex-col sm:flex-row border-b border-white/10 py-4">
-                    <div class="sm:w-1/3 font-bold text-[#c5a059] mb-1 sm:mb-0">団体名</div>
-                    <div class="sm:w-2/3 text-gray-200">SCOPE学生実行委員会</div>
-                </div>
-                <div class="flex flex-col sm:flex-row border-b border-white/10 py-4">
-                    <div class="sm:w-1/3 font-bold text-[#c5a059] mb-1 sm:mb-0">設立</div>
-                    <div class="sm:w-2/3 text-gray-200">令和8年5月8日</div>
-                </div>
-                <div class="flex flex-col sm:flex-row border-b border-white/10 py-4">
-                    <div class="sm:w-1/3 font-bold text-[#c5a059] mb-1 sm:mb-0">代表</div>
-                    <div class="sm:w-2/3 text-gray-200">柴 聡一郎</div>
-                </div>
-                <div class="flex flex-col sm:flex-row border-b border-white/10 py-4">
-                    <div class="sm:w-1/3 font-bold text-[#c5a059] mb-1 sm:mb-0">所在地</div>
-                    <div class="sm:w-2/3 text-gray-200">
-                        〒980-0802<br>
-                        宮城県仙台市青葉区二日町17-22 TNER308
+                    <div class="bg-gradient-to-b from-[#1a294d] to-[#121f3d] border border-white/10 rounded-2xl p-5 md:p-7">
+                        <div class="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 pb-3 md:pb-4 border-b border-white/10">
+                            <div class="w-10 md:w-12 h-10 md:h-12 rounded-full bg-white/10 flex items-center justify-center border border-white/20 text-white text-lg md:text-xl shrink-0">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-white text-base md:text-lg">学生と繋がりたい経営者</h3>
+                                <span class="text-[10px] md:text-xs text-gray-400">熱意ある若手を応援・探している経営者</span>
+                            </div>
+                        </div>
+                        <ul class="text-gray-300 text-xs md:text-sm space-y-2.5 md:space-y-3 font-light">
+                            <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-gray-400 mt-1 shrink-0"></i> 最近の学生のリアルな生の声を聞きたい</li>
+                            <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-gray-400 mt-1 shrink-0"></i> 熱意のあるコア人材の採用・インターンに繋げたい</li>
+                            <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-gray-400 mt-1 shrink-0"></i> 頑張る若者を直接応援したい・交流したい</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="flex flex-col sm:flex-row border-b border-white/10 py-4">
-                    <div class="sm:w-1/3 font-bold text-[#c5a059] mb-1 sm:mb-0">電話番号</div>
-                    <div class="sm:w-2/3 text-gray-200">022-796-7344</div>
-                </div>
-                <div class="flex flex-col sm:flex-row border-b border-white/10 py-4">
-                    <div class="sm:w-1/3 font-bold text-[#c5a059] mb-1 sm:mb-0">メールアドレス</div>
-                    <div class="sm:w-2/3 text-gray-200">
-                        <a href="mailto:info@epi-c.co.jp" class="hover:underline hover:text-white transition">info@epi-c.co.jp</a>
-                    </div>
-                </div>
-                <div class="flex flex-col sm:flex-row border-b border-white/10 py-4">
-                    <div class="sm:w-1/3 font-bold text-[#c5a059] mb-1 sm:mb-0">事務局</div>
-                    <div class="sm:w-2/3 text-gray-200">株式会社 epi&company</div>
-                </div>
             </div>
-        </section>
-        
-        <div class="text-center mt-12">
-            <a href="index.html" class="text-xs text-gray-400 hover:text-[#c5a059] transition inline-flex items-center gap-1">
-                &larr; トップページへ戻る
-            </a>
+        </div>
+
+        <div class="bg-white/[0.02] border border-white/10 rounded-2xl md:rounded-3xl p-5 md:p-12 backdrop-blur-xl shadow-2xl" data-aos="fade-up">
+            <h2 class="text-lg md:text-2xl font-bold text-[#c5a059] mb-6 md:mb-8 flex items-center gap-2.5">
+                <i class="fa-solid fa-building text-[#c5a059] text-base md:text-lg"></i>
+                団体概要
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-white/10 rounded-xl overflow-hidden border border-white/10">
+                <div class="bg-[#0f1933] p-4 md:p-5 flex justify-between items-center"><span class="text-gray-400 text-xs">団体名</span><span class="font-bold text-xs md:text-sm">SCOPE学生実行委員会</span></div>
+                <div class="bg-[#0f1933] p-4 md:p-5 flex justify-between items-center"><span class="text-gray-400 text-xs">設立</span><span class="text-xs md:text-sm">令和8年5月8日</span></div>
+                <div class="bg-[#0f1933] p-4 md:p-5 flex justify-between items-center"><span class="text-gray-400 text-xs">学生代表</span><span class="text-xs md:text-sm font-bold">柴 聡一郎</span></div>
+                <div class="bg-[#0f1933] p-4 md:p-5 flex justify-between items-center"><span class="text-gray-400 text-xs">電話番号</span><span class="text-xs md:text-sm">022-796-7344</span></div>
+                <div class="bg-[#0f1933] p-4 md:p-5 flex justify-between items-center"><span class="text-gray-400 text-xs">メールアドレス</span><a href="mailto:info@epi-c.co.jp" class="text-[#c5a059] hover:underline text-xs md:text-sm">info@epi-c.co.jp</a></div>
+                <div class="bg-[#0f1933] p-4 md:p-5 flex justify-between items-center"><span class="text-gray-400 text-xs">事務局</span><span class="text-xs md:text-sm">株式会社 epi&company</span></div>
+                <div class="bg-[#0f1933] p-4 md:p-5 flex justify-between items-center"><span class="text-gray-400 text-xs">事務局代表</span><span class="text-xs md:text-sm">松橋 穂波</span></div>
+                <div class="bg-[#0f1933] p-4 md:p-5 flex flex-col md:flex-row justify-between md:items-center gap-1 md:col-span-2"><span class="text-gray-400 text-xs">所在地</span><span class="text-xs md:text-sm">〒980-0802 宮城県仙台市青葉区二日町17-22 TNER308</span></div>
+            </div>
         </div>
     </main>
 
-    <footer class="text-center py-6 border-t border-white/5 text-[10px] text-gray-500 bg-[#0d172b]">
+    <footer class="mt-auto text-center py-6 md:py-10 border-t border-white/10 text-[10px] md:text-xs text-gray-500 bg-[#070c1a]">
         <p>&copy; 2026 SCOPE 学生実行委員会. All Rights Reserved.</p>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 900, once: true, easing: 'ease-out-cubic' });
+    </script>
 </body>
 </html>
