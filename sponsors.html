@@ -25,26 +25,47 @@
 </head>
 <body class="bg-[#0b1329] text-white font-serif min-h-screen flex flex-col selection:bg-[#c5a059] selection:text-[#111e38] overflow-x-hidden">
 
-    <!-- 背景幾何学演出 -->
     <div class="fixed inset-0 pointer-events-none z-0">
         <div class="absolute top-[-10%] right-[-10%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-[#c5a059]/10 rounded-full blur-[100px] md:blur-[120px]"></div>
         <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#c5a059_1px,transparent_1px)] [background-size:24px_24px]"></div>
     </div>
 
     <!-- ヘッダー -->
-    <header class="sticky top-0 z-50 w-full px-4 md:px-6 flex items-center justify-between border-b border-white/10 bg-[#0b1329]/90 backdrop-blur-xl shadow-lg h-16 md:h-20 transition-all">
-        <div class="flex items-center shrink-0">
+    <header class="sticky top-0 z-50 w-full px-4 md:px-8 flex items-center justify-between border-b border-white/10 bg-[#0b1329]/90 backdrop-blur-xl shadow-lg h-16 md:h-20 transition-all">
+        <div class="flex items-center shrink-0 z-50">
             <a href="index.html">
                 <img src="logo.PNG" alt="SCOPE" class="h-7 md:h-9 w-auto object-contain">
             </a>
         </div>
-        <nav class="flex items-center space-x-4 md:space-x-6 text-xs md:text-sm font-medium text-gray-200 overflow-x-auto no-scrollbar py-2">
-            <a href="index.html" class="relative py-1 hover:text-[#c5a059] transition-colors whitespace-nowrap after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#c5a059] hover:after:w-full after:transition-all after:duration-300">HOME</a>
-            <a href="about.html" class="relative py-1 hover:text-[#c5a059] transition-colors whitespace-nowrap after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#c5a059] hover:after:w-full after:transition-all after:duration-300">ABOUT</a>
-            <a href="event.html" class="relative py-1 hover:text-[#c5a059] transition-colors whitespace-nowrap after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#c5a059] hover:after:w-full after:transition-all after:duration-300">EVENT</a>
-            <a href="sponsors.html" class="relative py-1 text-[#c5a059] font-bold whitespace-nowrap after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#c5a059]">SPONSORS</a>
-            <a href="https://lin.ee/wIPsUuG" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-[#c5a059] to-[#dfba73] text-[#0b1329] px-4 md:px-5 py-1.5 md:py-2 rounded-full font-bold hover:brightness-110 transition shadow-[0_0_15px_rgba(197,160,89,0.4)] whitespace-nowrap text-xs">LINE登録</a>
+        
+        <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-200">
+            <a href="index.html" class="relative py-1 hover:text-[#c5a059] transition-colors after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#c5a059] hover:after:w-full after:transition-all after:duration-300">HOME</a>
+            <a href="about.html" class="relative py-1 hover:text-[#c5a059] transition-colors after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#c5a059] hover:after:w-full after:transition-all after:duration-300">ABOUT</a>
+            <a href="event.html" class="relative py-1 hover:text-[#c5a059] transition-colors after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#c5a059] hover:after:w-full after:transition-all after:duration-300">EVENT</a>
+            <a href="sponsors.html" class="relative py-1 text-[#c5a059] font-bold after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#c5a059]">SPONSORS</a>
+            <a href="https://www.instagram.com/scope_matching?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-[#c5a059] text-lg transition px-1" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://lin.ee/wIPsUuG" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-[#c5a059] to-[#dfba73] text-[#0b1329] px-5 py-2 rounded-full font-bold hover:brightness-110 transition shadow-[0_0_15px_rgba(197,160,89,0.4)] whitespace-nowrap text-xs">LINE登録</a>
         </nav>
+
+        <!-- スマホボタン -->
+        <button id="menu-btn" onclick="toggleMenu()" class="md:hidden text-white text-xl p-2 z-50 focus:outline-none" aria-label="メニューを開く">
+            <i id="menu-icon" class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- スマホメニュー -->
+        <div id="mobile-menu" class="fixed inset-0 bg-[#070c1a]/95 backdrop-blur-2xl flex flex-col items-center justify-center space-y-6 text-center z-40 hidden md:hidden transition-all duration-300">
+            <a href="index.html" class="text-lg text-gray-200 hover:text-[#c5a059] transition">HOME</a>
+            <a href="about.html" class="text-lg text-gray-200 hover:text-[#c5a059] transition">ABOUT</a>
+            <a href="event.html" class="text-lg text-gray-200 hover:text-[#c5a059] transition">EVENT</a>
+            <a href="sponsors.html" class="text-xl font-bold text-[#c5a059]">SPONSORS</a>
+            
+            <div class="pt-4 flex flex-col items-center gap-4 w-64">
+                <a href="https://lin.ee/wIPsUuG" target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-r from-[#c5a059] to-[#dfba73] text-[#0b1329] py-3 rounded-full font-bold shadow-lg">LINE登録</a>
+                <a href="https://www.instagram.com/scope_matching?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 border border-[#c5a059]/40 text-[#c5a059] py-2.5 rounded-full w-full font-bold text-xs bg-[#c5a059]/10">
+                    <i class="fa-brands fa-instagram text-base"></i> 公式Instagram
+                </a>
+            </div>
+        </div>
     </header>
 
     <main class="flex-grow max-w-6xl w-full mx-auto px-4 md:px-6 py-12 md:py-20 relative z-10">
@@ -58,10 +79,8 @@
         </div>
 
         <div class="grid grid-cols-1 gap-8 md:gap-12">
-            
-            <!-- 企業カード 1 -->
+            <!-- 企業 1 -->
             <article class="bg-[#121c36] border border-white/10 rounded-2xl md:rounded-3xl overflow-hidden backdrop-blur-xl shadow-2xl transition-all" data-aos="fade-up">
-                <!-- 概要ヘッダー部分 -->
                 <div class="grid grid-cols-1 lg:grid-cols-12">
                     <div class="lg:col-span-5 bg-[#182647] flex flex-col items-center justify-center p-6 md:p-8 border-b lg:border-b-0 lg:border-r border-white/10 min-h-[200px] relative overflow-hidden">
                         <i class="fa-solid fa-building-user text-4xl text-[#c5a059]/40 mb-3"></i>
@@ -85,7 +104,6 @@
                         
                         <div class="pt-4 border-t border-white/10 flex items-center justify-between">
                             <span class="text-[10px] md:text-xs text-gray-400">募集職種: 総合職 / 企画営業 / エンジニア</span>
-                            <!-- 開閉ボタン -->
                             <button onclick="toggleDetail('sponsor-1', this)" class="inline-flex items-center gap-2 text-xs text-[#c5a059] font-bold hover:brightness-125 transition bg-[#c5a059]/10 px-4 py-2 rounded-xl border border-[#c5a059]/30">
                                 <span>取材記事・採用情報を見る</span>
                                 <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
@@ -94,17 +112,14 @@
                     </div>
                 </div>
 
-                <!-- 開閉する詳細エリア（取材記事 ＋ 採用情報） -->
+                <!-- 開閉エリア -->
                 <div id="sponsor-1" class="hidden border-t border-white/10 bg-[#0c1429] p-5 md:p-10 space-y-10">
-                    
-                    <!-- ① 取材記事セクション -->
                     <div>
                         <h3 class="text-lg md:text-xl font-bold text-[#c5a059] mb-6 flex items-center gap-2 border-b border-[#c5a059]/30 pb-3">
                             <i class="fa-solid fa-comments"></i> SCOPE 独自取材インタビュー
                         </h3>
 
                         <div class="space-y-6">
-                            <!-- Q1 -->
                             <div class="bg-white/[0.02] border border-white/5 rounded-xl p-4 md:p-5">
                                 <h4 class="text-xs md:text-sm font-bold text-[#e5c583] mb-2 flex items-start gap-2">
                                     <span class="bg-[#c5a059] text-[#0b1329] text-[10px] px-1.5 py-0.5 rounded shrink-0 font-extrabold">Q1</span>
@@ -115,7 +130,6 @@
                                 </p>
                             </div>
 
-                            <!-- Q2 -->
                             <div class="bg-white/[0.02] border border-white/5 rounded-xl p-4 md:p-5">
                                 <h4 class="text-xs md:text-sm font-bold text-[#e5c583] mb-2 flex items-start gap-2">
                                     <span class="bg-[#c5a059] text-[#0b1329] text-[10px] px-1.5 py-0.5 rounded shrink-0 font-extrabold">Q2</span>
@@ -126,7 +140,6 @@
                                 </p>
                             </div>
 
-                            <!-- Q3 -->
                             <div class="bg-white/[0.02] border border-white/5 rounded-xl p-4 md:p-5">
                                 <h4 class="text-xs md:text-sm font-bold text-[#e5c583] mb-2 flex items-start gap-2">
                                     <span class="bg-[#c5a059] text-[#0b1329] text-[10px] px-1.5 py-0.5 rounded shrink-0 font-extrabold">Q3</span>
@@ -137,7 +150,6 @@
                                 </p>
                             </div>
 
-                            <!-- Q4 -->
                             <div class="bg-white/[0.02] border border-white/5 rounded-xl p-4 md:p-5">
                                 <h4 class="text-xs md:text-sm font-bold text-[#e5c583] mb-2 flex items-start gap-2">
                                     <span class="bg-[#c5a059] text-[#0b1329] text-[10px] px-1.5 py-0.5 rounded shrink-0 font-extrabold">Q4</span>
@@ -148,7 +160,6 @@
                                 </p>
                             </div>
 
-                            <!-- Q5 -->
                             <div class="bg-white/[0.02] border border-white/5 rounded-xl p-4 md:p-5">
                                 <h4 class="text-xs md:text-sm font-bold text-[#e5c583] mb-2 flex items-start gap-2">
                                     <span class="bg-[#c5a059] text-[#0b1329] text-[10px] px-1.5 py-0.5 rounded shrink-0 font-extrabold">Q5</span>
@@ -159,27 +170,24 @@
                                 </p>
                             </div>
 
-                            <!-- Q6 -->
                             <div class="bg-white/[0.02] border border-white/5 rounded-xl p-4 md:p-5">
                                 <h4 class="text-xs md:text-sm font-bold text-[#e5c583] mb-2 flex items-start gap-2">
                                     <span class="bg-[#c5a059] text-[#0b1329] text-[10px] px-1.5 py-0.5 rounded shrink-0 font-extrabold">Q6</span>
                                     最後に、学生に向けてメッセージをお願いします！
                                 </h4>
                                 <p class="text-xs md:text-sm text-gray-300 font-light leading-relaxed pl-6">
-                                    就活はお互いの本音でマッチングする場です。SCOPEなどの交流会でどんどん大人や経営者と話し、自分の可能性を広げてください。熱い想いを持った皆さんとお会いできるのを楽しみにしています！
+                                    就活はお互いの本音でマッチングする場です。SCOPEなどの交流会でどんどん大人や経営者と話し、自分の可能性を広げてくだい。熱い想いを持った皆さんとお会いできるのを楽しみにしています！
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- ② 採用情報セクション -->
                     <div>
                         <h3 class="text-lg md:text-xl font-bold text-[#c5a059] mb-6 flex items-center gap-2 border-b border-[#c5a059]/30 pb-3">
                             <i class="fa-solid fa-briefcase"></i> 募集要項・採用情報
                         </h3>
 
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <!-- 新卒採用 -->
                             <div class="bg-[#152244] border border-white/10 p-5 rounded-xl flex flex-col justify-between">
                                 <div>
                                     <span class="bg-[#c5a059] text-[#0b1329] text-[10px] font-bold px-2 py-0.5 rounded inline-block mb-3">新卒採用</span>
@@ -193,7 +201,6 @@
                                 <a href="https://lin.ee/wIPsUuG" target="_blank" class="block text-center bg-white/10 hover:bg-[#c5a059] hover:text-[#0b1329] text-xs font-bold py-2 rounded-lg transition border border-white/10">LINEからエントリー &rarr;</a>
                             </div>
 
-                            <!-- インターン -->
                             <div class="bg-[#152244] border border-white/10 p-5 rounded-xl flex flex-col justify-between">
                                 <div>
                                     <span class="bg-blue-500/20 text-blue-300 border border-blue-500/40 text-[10px] font-bold px-2 py-0.5 rounded inline-block mb-3">長期インターン</span>
@@ -207,7 +214,6 @@
                                 <a href="https://lin.ee/wIPsUuG" target="_blank" class="block text-center bg-white/10 hover:bg-[#c5a059] hover:text-[#0b1329] text-xs font-bold py-2 rounded-lg transition border border-white/10">LINEから話を聞いてみる &rarr;</a>
                             </div>
 
-                            <!-- アルバイト -->
                             <div class="bg-[#152244] border border-white/10 p-5 rounded-xl flex flex-col justify-between">
                                 <div>
                                     <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] font-bold px-2 py-0.5 rounded inline-block mb-3">有償アルバイト</span>
@@ -222,11 +228,10 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </article>
 
-            <!-- 企業カード 2（サンプル） -->
+            <!-- 企業 2 -->
             <article class="bg-[#121c36] border border-white/10 rounded-2xl md:rounded-3xl overflow-hidden backdrop-blur-xl shadow-2xl transition-all" data-aos="fade-up" data-aos-delay="100">
                 <div class="grid grid-cols-1 lg:grid-cols-12">
                     <div class="lg:col-span-5 bg-[#182647] flex flex-col items-center justify-center p-6 md:p-8 border-b lg:border-b-0 lg:border-r border-white/10 min-h-[200px] relative overflow-hidden">
@@ -258,7 +263,6 @@
                     </div>
                 </div>
 
-                <!-- 開閉エリア -->
                 <div id="sponsor-2" class="hidden border-t border-white/10 bg-[#0c1429] p-5 md:p-10 space-y-10">
                     <div>
                         <h3 class="text-lg md:text-xl font-bold text-[#c5a059] mb-6 flex items-center gap-2 border-b border-[#c5a059]/30 pb-3">
@@ -274,15 +278,6 @@
                                     地域の小規模事業者様向けに受託開発や生成AIを活用した業務効率化ツールを提供しています。顧客に寄り添う提案力が強みです。
                                 </p>
                             </div>
-                            <div class="bg-white/[0.02] border border-white/5 rounded-xl p-4">
-                                <h4 class="text-xs md:text-sm font-bold text-[#e5c583] mb-2 flex items-start gap-2">
-                                    <span class="bg-[#c5a059] text-[#0b1329] text-[10px] px-1.5 py-0.5 rounded shrink-0 font-extrabold">Q2</span>
-                                    最後に、学生に向けてメッセージをお願いします！
-                                </h4>
-                                <p class="text-xs md:text-sm text-gray-300 font-light leading-relaxed pl-6">
-                                    「まだ何がやりたいか分からない」という人にこそ来てほしいです。実際に手を動かして働くことで見えてくる世界があります！
-                                </p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -292,6 +287,10 @@
     </main>
 
     <footer class="mt-auto text-center py-6 md:py-10 border-t border-white/10 text-[10px] md:text-xs text-gray-500 bg-[#070c1a]">
+        <div class="flex justify-center items-center gap-4 mb-3 text-base text-gray-400">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="hover:text-[#c5a059] transition"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://lin.ee/wIPsUuG" target="_blank" rel="noopener noreferrer" class="hover:text-[#c5a059] transition"><i class="fa-brands fa-line"></i></a>
+        </div>
         <p>&copy; 2026 SCOPE 学生実行委員会. All Rights Reserved.</p>
     </footer>
 
@@ -299,11 +298,23 @@
     <script>
         AOS.init({ duration: 900, once: true, easing: 'ease-out-cubic' });
 
-        // 取材記事・採用情報の開閉スクリプト
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        }
+
         function toggleDetail(id, btn) {
             const detailArea = document.getElementById(id);
             const icon = btn.querySelector('i');
-            
             if (detailArea.classList.contains('hidden')) {
                 detailArea.classList.remove('hidden');
                 icon.style.transform = 'rotate(180deg)';
